@@ -30,17 +30,55 @@ llm = ChatOllama(model=local_llm,
                  temperature=0)
 
 # Create prompt template
-template = """<bos><start_of_turn>user\nAnswer the question based only on the following context and extract out a meaningful answer. \
-Please write in full sentences with correct spelling and punctuation. if it makes sense use lists. \
-If the context doen't contain the answer, just respond that you are unable to find an answer. \
+template = """{{ if .Messages }}
+{{- if or .System .Tools }}<|start_header_id|>system<|end_header_id|>
+{{- if .System }}
 
-CONTEXT: {context}
+{{ .System }}
+{{- end }}
+{{- if .Tools }}
 
-QUESTION: {question}
+You are a helpful assistant with tool calling capabilities. When you receive a tool call response, use the output to format an answer to the orginal use question.
+{{- end }}
+{{- end }}<|eot_id|>
+{{- range $i, $_ := .Messages }}
+{{- $last := eq (len (slice $.Messages $i)) 1 }}
+{{- if eq .Role "user" }}<|start_header_id|>user<|end_header_id|>
+{{- if and $.Tools $last }}
 
-<end_of_turn>
-<start_of_turn>model\n
-ANSWER:"""
+Given the following functions, please respond with a JSON for a function call with its proper arguments that best answers the given prompt.
+
+Respond in the format {"name": function name, "parameters": dictionary of argument name and its value}. Do not use variables.
+
+{{ $.Tools }}
+{{- end }}
+
+{{ .Content }}<|eot_id|>{{ if $last }}<|start_header_id|>assistant<|end_header_id|>
+
+{{ end }}
+{{- else if eq .Role "assistant" }}<|start_header_id|>assistant<|end_header_id|>
+{{- if .ToolCalls }}
+
+{{- range .ToolCalls }}{"name": "{{ .Function.Name }}", "parameters": {{ .Function.Arguments }}}{{ end }}
+{{- else }}
+
+{{ .Content }}{{ if not $last }}<|eot_id|>{{ end }}
+{{- end }}
+{{- else if eq .Role "tool" }}<|start_header_id|>ipython<|end_header_id|>
+
+{{ .Content }}<|eot_id|>{{ if $last }}<|start_header_id|>assistant<|end_header_id|>
+
+{{ end }}
+{{- end }}
+{{- end }}
+{{- else }}
+{{- if .System }}<|start_header_id|>system<|end_header_id|>
+
+{{ .System }}<|eot_id|>{{ end }}{{ if .Prompt }}<|start_header_id|>user<|end_header_id|>
+
+{{ .Prompt }}<|eot_id|>{{ end }}<|start_header_id|>assistant<|end_header_id|>
+
+{{ end }}{{ .Response }}{{ if .Response }}<|eot_id|>{{ end }}"""
 prompt = ChatPromptTemplate.from_template(template)
 
 # Create the RAG chain using LCEL with prompt printing and streaming output
