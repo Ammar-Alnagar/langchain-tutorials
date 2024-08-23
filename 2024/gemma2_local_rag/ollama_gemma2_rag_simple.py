@@ -22,7 +22,7 @@ retriever = db.as_retriever(
 )
 
 # # Create Ollama language model - Gemma 2
-local_llm = 'gemma2'
+local_llm = 'llama3.1'
 
 llm = ChatOllama(model=local_llm,
                  keep_alive="3h", 
