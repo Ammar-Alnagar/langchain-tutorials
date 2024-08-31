@@ -22,12 +22,12 @@ retriever = db.as_retriever(
 )
 
 # # Create Ollama language model - Gemma 2
-local_llm = 'llama3.1'
+local_llm = 'hermes3'
 
 llm = ChatOllama(model=local_llm,
                  keep_alive="3h", 
-                 max_tokens=512,  
-                 temperature=0)
+                 max_tokens=1024,  
+                 temperature=0.8)
 
 # Create prompt template
 template = """{{ if .Messages }}
