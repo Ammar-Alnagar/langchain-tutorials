@@ -10,9 +10,9 @@ from langchain.schema.output_parser import StrOutputParser
 
 
 # # Create embeddingsclear
-embeddings = OllamaEmbeddings(model="nomic-embed-text", show_progress=False)
+embeddings = OllamaEmbeddings(model="mxbai-embed-large", show_progress=True)
 
-db = Chroma(persist_directory="./db-hormozi",
+db = Chroma(persist_directory="./db-mawared",
             embedding_function=embeddings)
 
 # # Create retriever

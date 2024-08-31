@@ -1,5 +1,4 @@
-
-from langchain_experimental.text_splitter import SemanticChunker
+# from langchain_experimental.text_splitter import SemanticChunker # type: ignore
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
@@ -7,10 +6,10 @@ from langchain_community.document_loaders import DirectoryLoader
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_community.vectorstores import Chroma
 
-# Load documents from a directory
-loader = DirectoryLoader("./hormozi_transcripts", glob="**/*.txt")
+# Load documents from a PDF file
+loader = DirectoryLoader("./2024/gemma2_local_rag", glob="**/*.pdf")
 
-print("dir loaded loader")
+print("pdf loaded loader")
 
 documents = loader.load()
 
@@ -35,6 +34,6 @@ texts = text_splitter.split_documents(documents)
 vectorstore = Chroma.from_documents(
     documents=texts, 
     embedding= embeddings,
-    persist_directory="./db-hormozi")
+    persist_directory="./db-mawared")
 
 print("vectorstore created")
