@@ -32,6 +32,9 @@ def main():
     vectorstore = Chroma.from_documents(documents=all_splits,
                                         embedding=GPT4AllEmbeddings())
 
+
+
+
     # Retrieve
     # question = "What are the latest headlines on {url}?"
     # docs = vectorstore.similarity_search(question)
