@@ -11,6 +11,7 @@ from langchain.schema.output_parser import StrOutputParser
 
 # # Create embeddingsclear
 embeddings = OllamaEmbeddings(model="mxbai-embed-large", show_progress=True)
+# embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 db = Chroma(persist_directory="./db-mawared",
             embedding_function=embeddings)
@@ -21,7 +22,23 @@ retriever = db.as_retriever(
     search_kwargs= {"k": 5}
 )
 
+
 # # Create Ollama language model - Gemma 2
+
+# callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
+# llm = LlamaCpp(
+#     model_path="/path/to/your/gguf/model.gguf",  # Replace with the path to your GGUF model
+#     temperature=0.8,
+#     max_tokens=1024,
+#     n_ctx=2048,  # Adjust based on your model's context window
+#     callback_manager=callback_manager,
+#     verbose=True,
+# )
+
+# pipe = pipeline(model="path_to_your_gguf_model", device=0)  # specify the correct device
+
+# # Create the LLM with HuggingFacePipeline
+# llm = HuggingFacePipeline(pipeline=pipe)
 local_llm = 'hermes3'
 
 llm = ChatOllama(model=local_llm,
