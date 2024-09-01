@@ -88,6 +88,7 @@ rag_chain = (
     | llm
 )
 
+
 # Function to ask questions
 def ask_question(question):
     print("Answer:\n\n", end=" ", flush=True)
