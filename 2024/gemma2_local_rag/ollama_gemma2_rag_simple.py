@@ -23,6 +23,7 @@ retriever = db.as_retriever(
 )
 
 
+
 # # Create Ollama language model - Gemma 2
 
 # callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
