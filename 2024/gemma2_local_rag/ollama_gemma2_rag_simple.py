@@ -8,7 +8,6 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 
-
 # # Create embeddingsclear
 embeddings = OllamaEmbeddings(model="mxbai-embed-large", show_progress=True)
 # embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -21,7 +20,6 @@ retriever = db.as_retriever(
     search_type="similarity",
     search_kwargs= {"k": 5}
 )
-
 
 
 # # Create Ollama language model - Gemma 2
