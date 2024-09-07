@@ -8,9 +8,9 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 
-
 # # Create embeddingsclear
-embeddings = OllamaEmbeddings(model="nomic-embed-text", show_progress=True)
+embeddings = OllamaEmbeddings(model="mxbai-embed-large", show_progress=True)
+# embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 db = Chroma(persist_directory="./db-mawared",
             embedding_function=embeddings)
@@ -21,13 +21,29 @@ retriever = db.as_retriever(
     search_kwargs= {"k": 5}
 )
 
+
 # # Create Ollama language model - Gemma 2
-local_llm = 'ajindal/llama3.1-storm:8b'
+
+# callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
+# llm = LlamaCpp(
+#     model_path="/path/to/your/gguf/model.gguf",  # Replace with the path to your GGUF model
+#     temperature=0.8,
+#     max_tokens=1024,
+#     n_ctx=2048,  # Adjust based on your model's context window
+#     callback_manager=callback_manager,
+#     verbose=True,
+# )
+
+# pipe = pipeline(model="path_to_your_gguf_model", device=0)  # specify the correct device
+
+# # Create the LLM with HuggingFacePipeline
+# llm = HuggingFacePipeline(pipeline=pipe)
+local_llm = 'hermes3'
 
 llm = ChatOllama(model=local_llm,
                  keep_alive="3h", 
                  max_tokens=1024,  
-                 temperature=1)
+                 temperature=0.8)
 
 # Create prompt template
 template = """You are a helpful assistant specialized in Mawared HR System . Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
@@ -47,6 +63,7 @@ rag_chain = (
     | llm
     | StrOutputParser()
 )
+
 
 # Function to ask questions
 def ask_question(question):
