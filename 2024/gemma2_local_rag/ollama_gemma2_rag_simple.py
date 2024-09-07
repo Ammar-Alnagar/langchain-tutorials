@@ -9,7 +9,7 @@ from langchain.schema.runnable import RunnablePassthrough
 from langchain.schema.output_parser import StrOutputParser
 
 # # Create embeddingsclear
-embeddings = OllamaEmbeddings(model="nomic-embed-text", show_progress=True)
+embeddings = OllamaEmbeddings(model="nomic-embed-text", show_progress=False)
 # embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 db = Chroma(persist_directory="./db-mawared",
@@ -28,12 +28,12 @@ retriever = db.as_retriever(
 
 # # Create the LLM with HuggingFacePipeline
 # llm = HuggingFacePipeline(pipeline=pipe)
-local_llm = 'llama3.1'
+local_llm = 'gem'
 
 llm = ChatOllama(model=local_llm,
                  keep_alive="3h", 
-                 num_ctx=1024,  # Changed from max_tokens to num_ctx
-                 temperature=0.8)
+                 num_ctx=512,  # Changed from max_tokens to num_ctx
+                 temperature=0.7)
 
 # Create prompt template
 template = """You are a helpful assistant specialized in Mawared HR System . Use the following pieces of context to answer the question at the end. If you don't know the answer, Ask more questions to get more context.
