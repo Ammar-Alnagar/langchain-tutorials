@@ -28,15 +28,15 @@ retriever = db.as_retriever(
 
 # # Create the LLM with HuggingFacePipeline
 # llm = HuggingFacePipeline(pipeline=pipe)
-local_llm = 'gimmo'
+local_llm = 'llama3.1'
 
 llm = ChatOllama(model=local_llm,
                  keep_alive="3h", 
-                 max_tokens=1024,  
+                 num_ctx=1024,  # Changed from max_tokens to num_ctx
                  temperature=0.8)
 
 # Create prompt template
-template = """You are a helpful assistant specialized in Mawared HR System . Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
+template = """You are a helpful assistant specialized in Mawared HR System . Use the following pieces of context to answer the question at the end. If you don't know the answer, Ask more questions to get more context.
 
 Context:
 {context}
