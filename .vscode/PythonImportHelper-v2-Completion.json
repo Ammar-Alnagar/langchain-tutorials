@@ -277,7 +277,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.indexer",
         "description": "2024.gemma2_local_rag.indexer",
-        "peekOfCode": "loader = DirectoryLoader(\"./2024/gemma2_local_rag\", glob=\"**/*.pdf\")\nprint(\"pdf loaded loader\")\ndocuments = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,",
+        "peekOfCode": "loader = DirectoryLoader(\"./2024/gemma2_local_rag\", glob=\"**/*.pdf\")\nprint(\"pdf loaded loader\")\ndocuments = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"bge-m3\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,",
         "detail": "2024.gemma2_local_rag.indexer",
         "documentation": {}
     },
@@ -286,7 +286,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.indexer",
         "description": "2024.gemma2_local_rag.indexer",
-        "peekOfCode": "documents = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,",
+        "peekOfCode": "documents = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"bge-m3\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,",
         "detail": "2024.gemma2_local_rag.indexer",
         "documentation": {}
     },
@@ -295,7 +295,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.indexer",
         "description": "2024.gemma2_local_rag.indexer",
-        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,\n)\n# # Split documents into chunks\ntexts = text_splitter.split_documents(documents)",
+        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"bge-m3\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,\n)\n# # Split documents into chunks\ntexts = text_splitter.split_documents(documents)",
         "detail": "2024.gemma2_local_rag.indexer",
         "documentation": {}
     },
@@ -439,7 +439,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=False)\n# embeddings = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\")\ndb = Chroma(persist_directory=\"./db-mawared\",\n            embedding_function=embeddings)\n# Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2",
+        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"bge-m3\", show_progress=False)\n# embeddings = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\")\ndb = Chroma(persist_directory=\"./db-mawared\",\n            embedding_function=embeddings)\n# Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
@@ -457,7 +457,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "retriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2\n# # Create the LLM with HuggingFacePipeline\n# llm = HuggingFacePipeline(pipeline=pipe)\nlocal_llm = 'llama3.1'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", ",
+        "peekOfCode": "retriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2\n# # Create the LLM with HuggingFacePipeline\n# llm = HuggingFacePipeline(pipeline=pipe)\nlocal_llm = 'hermes3'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", ",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
@@ -466,7 +466,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "local_llm = 'llama3.1'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 num_ctx=1024,  # Changed from max_tokens to num_ctx\n                 temperature=0.5)\n# Create prompt template\ntemplate = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.",
+        "peekOfCode": "local_llm = 'hermes3'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 num_ctx=1024,  # Changed from max_tokens to num_ctx\n                 temperature=0.8)\n# Create prompt template\ntemplate = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
@@ -475,7 +475,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "llm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 num_ctx=1024,  # Changed from max_tokens to num_ctx\n                 temperature=0.5)\n# Create prompt template\ntemplate = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.\n2. Be concise and direct.",
+        "peekOfCode": "llm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 num_ctx=1024,  # Changed from max_tokens to num_ctx\n                 temperature=0.8)\n# Create prompt template\ntemplate = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.\n2. Be concise and direct.",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
