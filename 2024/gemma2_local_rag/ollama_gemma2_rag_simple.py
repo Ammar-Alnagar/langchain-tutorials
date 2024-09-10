@@ -30,6 +30,14 @@ retriever = db.as_retriever(
 
 # # Create the LLM with HuggingFacePipeline
 # llm = HuggingFacePipeline(pipeline=pipe)
+
+
+# llm = ChatGroq(
+#             groq_api_key= "",
+#             model_name=""
+# )
+
+
 local_llm = 'hermes3'
 
 llm = ChatOllama(model=local_llm,
