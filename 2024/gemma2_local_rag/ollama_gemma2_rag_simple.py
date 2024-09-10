@@ -15,11 +15,13 @@ embeddings = OllamaEmbeddings(model="nomic-embed-text", show_progress=False)
 db = Chroma(persist_directory="./db-mawared",
             embedding_function=embeddings)
 
-# # Create retriever
+# Create retriever
 retriever = db.as_retriever(
     search_type="similarity",
-    search_kwargs= {"k": 5}
+    search_kwargs= {"k": 3}
 )
+
+
 
 
 # # Create Ollama language model - Gemma 2
@@ -28,22 +30,30 @@ retriever = db.as_retriever(
 
 # # Create the LLM with HuggingFacePipeline
 # llm = HuggingFacePipeline(pipeline=pipe)
-local_llm = 'ajindal/llama3.1-storm:8b'
+local_llm = 'llama3.1'
 
 llm = ChatOllama(model=local_llm,
                  keep_alive="3h", 
                  num_ctx=1024,  # Changed from max_tokens to num_ctx
-                 temperature=0.8)
+                 temperature=0.5)
 
 # Create prompt template
-template = """You are a helpful assistant specialized in Mawared HR System . Use the following pieces of context to answer the question at the end. If you don't know the answer, Ask more questions to get more context.
+template = """
+You are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.
+
+Make sure to:
+1. Use only the provided context to generate the answer.
+2. Be concise and direct.
+3. If the context is insufficient, ask relevant follow-up questions instead of speculating.
 
 Context:
 {context}
 
 Question: {question}
 
-Answer:"""
+Answer:
+"""
+
 prompt = ChatPromptTemplate.from_template(template)
 
 # Create the RAG chain using LCEL with prompt printing and streaming output
@@ -57,7 +67,7 @@ rag_chain = (
 
 # Function to ask questions
 def ask_question(question):
-    print("Answer:\n\n", end=" ", flush=True)
+    print("Answer:\t", end=" ", flush=True)
     for chunk in rag_chain.stream(question):
         print(chunk, end="", flush=True)
     print("\n")

@@ -1,0 +1,554 @@
+[
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain_text_splitters",
+        "description": "langchain_text_splitters",
+        "isExtraImport": true,
+        "detail": "langchain_text_splitters",
+        "documentation": {}
+    },
+    {
+        "label": "DirectoryLoader",
+        "importPath": "langchain_community.document_loaders",
+        "description": "langchain_community.document_loaders",
+        "isExtraImport": true,
+        "detail": "langchain_community.document_loaders",
+        "documentation": {}
+    },
+    {
+        "label": "OllamaEmbeddings",
+        "importPath": "langchain_community.embeddings",
+        "description": "langchain_community.embeddings",
+        "isExtraImport": true,
+        "detail": "langchain_community.embeddings",
+        "documentation": {}
+    },
+    {
+        "label": "OllamaEmbeddings",
+        "importPath": "langchain_community.embeddings",
+        "description": "langchain_community.embeddings",
+        "isExtraImport": true,
+        "detail": "langchain_community.embeddings",
+        "documentation": {}
+    },
+    {
+        "label": "Chroma",
+        "importPath": "langchain_community.vectorstores",
+        "description": "langchain_community.vectorstores",
+        "isExtraImport": true,
+        "detail": "langchain_community.vectorstores",
+        "documentation": {}
+    },
+    {
+        "label": "Chroma",
+        "importPath": "langchain_community.vectorstores",
+        "description": "langchain_community.vectorstores",
+        "isExtraImport": true,
+        "detail": "langchain_community.vectorstores",
+        "documentation": {}
+    },
+    {
+        "label": "MultiQueryRetriever",
+        "importPath": "langchain.retrievers",
+        "description": "langchain.retrievers",
+        "isExtraImport": true,
+        "detail": "langchain.retrievers",
+        "documentation": {}
+    },
+    {
+        "label": "ChatOllama",
+        "importPath": "langchain_community.chat_models",
+        "description": "langchain_community.chat_models",
+        "isExtraImport": true,
+        "detail": "langchain_community.chat_models",
+        "documentation": {}
+    },
+    {
+        "label": "ChatPromptTemplate",
+        "importPath": "langchain.prompts",
+        "description": "langchain.prompts",
+        "isExtraImport": true,
+        "detail": "langchain.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "ChatPromptTemplate",
+        "importPath": "langchain.prompts",
+        "description": "langchain.prompts",
+        "isExtraImport": true,
+        "detail": "langchain.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "PromptTemplate",
+        "importPath": "langchain.prompts",
+        "description": "langchain.prompts",
+        "isExtraImport": true,
+        "detail": "langchain.prompts",
+        "documentation": {}
+    },
+    {
+        "label": "RunnablePassthrough",
+        "importPath": "langchain.schema.runnable",
+        "description": "langchain.schema.runnable",
+        "isExtraImport": true,
+        "detail": "langchain.schema.runnable",
+        "documentation": {}
+    },
+    {
+        "label": "RunnablePassthrough",
+        "importPath": "langchain.schema.runnable",
+        "description": "langchain.schema.runnable",
+        "isExtraImport": true,
+        "detail": "langchain.schema.runnable",
+        "documentation": {}
+    },
+    {
+        "label": "StrOutputParser",
+        "importPath": "langchain.schema.output_parser",
+        "description": "langchain.schema.output_parser",
+        "isExtraImport": true,
+        "detail": "langchain.schema.output_parser",
+        "documentation": {}
+    },
+    {
+        "label": "StrOutputParser",
+        "importPath": "langchain.schema.output_parser",
+        "description": "langchain.schema.output_parser",
+        "isExtraImport": true,
+        "detail": "langchain.schema.output_parser",
+        "documentation": {}
+    },
+    {
+        "label": "OllamaEmbeddings",
+        "importPath": "langchain_community.embeddings.ollama",
+        "description": "langchain_community.embeddings.ollama",
+        "isExtraImport": true,
+        "detail": "langchain_community.embeddings.ollama",
+        "documentation": {}
+    },
+    {
+        "label": "Chroma",
+        "importPath": "langchain_community.vectorstores.chroma",
+        "description": "langchain_community.vectorstores.chroma",
+        "isExtraImport": true,
+        "detail": "langchain_community.vectorstores.chroma",
+        "documentation": {}
+    },
+    {
+        "label": "ChatOllama",
+        "importPath": "langchain_community.chat_models.ollama",
+        "description": "langchain_community.chat_models.ollama",
+        "isExtraImport": true,
+        "detail": "langchain_community.chat_models.ollama",
+        "documentation": {}
+    },
+    {
+        "label": "Ollama",
+        "importPath": "langchain.llms",
+        "description": "langchain.llms",
+        "isExtraImport": true,
+        "detail": "langchain.llms",
+        "documentation": {}
+    },
+    {
+        "label": "Ollama",
+        "importPath": "langchain.llms",
+        "description": "langchain.llms",
+        "isExtraImport": true,
+        "detail": "langchain.llms",
+        "documentation": {}
+    },
+    {
+        "label": "Ollama",
+        "importPath": "langchain.llms",
+        "description": "langchain.llms",
+        "isExtraImport": true,
+        "detail": "langchain.llms",
+        "documentation": {}
+    },
+    {
+        "label": "CallbackManager",
+        "importPath": "langchain.callbacks.manager",
+        "description": "langchain.callbacks.manager",
+        "isExtraImport": true,
+        "detail": "langchain.callbacks.manager",
+        "documentation": {}
+    },
+    {
+        "label": "CallbackManager",
+        "importPath": "langchain.callbacks.manager",
+        "description": "langchain.callbacks.manager",
+        "isExtraImport": true,
+        "detail": "langchain.callbacks.manager",
+        "documentation": {}
+    },
+    {
+        "label": "CallbackManager",
+        "importPath": "langchain.callbacks.manager",
+        "description": "langchain.callbacks.manager",
+        "isExtraImport": true,
+        "detail": "langchain.callbacks.manager",
+        "documentation": {}
+    },
+    {
+        "label": "StreamingStdOutCallbackHandler",
+        "importPath": "langchain.callbacks.streaming_stdout",
+        "description": "langchain.callbacks.streaming_stdout",
+        "isExtraImport": true,
+        "detail": "langchain.callbacks.streaming_stdout",
+        "documentation": {}
+    },
+    {
+        "label": "StreamingStdOutCallbackHandler",
+        "importPath": "langchain.callbacks.streaming_stdout",
+        "description": "langchain.callbacks.streaming_stdout",
+        "isExtraImport": true,
+        "detail": "langchain.callbacks.streaming_stdout",
+        "documentation": {}
+    },
+    {
+        "label": "StreamingStdOutCallbackHandler",
+        "importPath": "langchain.callbacks.streaming_stdout",
+        "description": "langchain.callbacks.streaming_stdout",
+        "isExtraImport": true,
+        "detail": "langchain.callbacks.streaming_stdout",
+        "documentation": {}
+    },
+    {
+        "label": "LLMChain",
+        "importPath": "langchain.chains",
+        "description": "langchain.chains",
+        "isExtraImport": true,
+        "detail": "langchain.chains",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "WebBaseLoader",
+        "importPath": "langchain.document_loaders",
+        "description": "langchain.document_loaders",
+        "isExtraImport": true,
+        "detail": "langchain.document_loaders",
+        "documentation": {}
+    },
+    {
+        "label": "RecursiveCharacterTextSplitter",
+        "importPath": "langchain.text_splitter",
+        "description": "langchain.text_splitter",
+        "isExtraImport": true,
+        "detail": "langchain.text_splitter",
+        "documentation": {}
+    },
+    {
+        "label": "Chroma",
+        "importPath": "langchain.vectorstores",
+        "description": "langchain.vectorstores",
+        "isExtraImport": true,
+        "detail": "langchain.vectorstores",
+        "documentation": {}
+    },
+    {
+        "label": "GPT4AllEmbeddings",
+        "importPath": "langchain.embeddings",
+        "description": "langchain.embeddings",
+        "isExtraImport": true,
+        "detail": "langchain.embeddings",
+        "documentation": {}
+    },
+    {
+        "label": "OllamaEmbeddings",
+        "importPath": "langchain.embeddings",
+        "description": "langchain.embeddings",
+        "isExtraImport": true,
+        "detail": "langchain.embeddings",
+        "documentation": {}
+    },
+    {
+        "label": "loader",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.indexer",
+        "description": "2024.gemma2_local_rag.indexer",
+        "peekOfCode": "loader = DirectoryLoader(\"./2024/gemma2_local_rag\", glob=\"**/*.pdf\")\nprint(\"pdf loaded loader\")\ndocuments = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,",
+        "detail": "2024.gemma2_local_rag.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "documents",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.indexer",
+        "description": "2024.gemma2_local_rag.indexer",
+        "peekOfCode": "documents = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,",
+        "detail": "2024.gemma2_local_rag.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "embeddings",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.indexer",
+        "description": "2024.gemma2_local_rag.indexer",
+        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,\n)\n# # Split documents into chunks\ntexts = text_splitter.split_documents(documents)",
+        "detail": "2024.gemma2_local_rag.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "text_splitter",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.indexer",
+        "description": "2024.gemma2_local_rag.indexer",
+        "peekOfCode": "text_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,\n)\n# # Split documents into chunks\ntexts = text_splitter.split_documents(documents)\n# # Create vector store\nvectorstore = Chroma.from_documents(\n    documents=texts, ",
+        "detail": "2024.gemma2_local_rag.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "texts",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.indexer",
+        "description": "2024.gemma2_local_rag.indexer",
+        "peekOfCode": "texts = text_splitter.split_documents(documents)\n# # Create vector store\nvectorstore = Chroma.from_documents(\n    documents=texts, \n    embedding= embeddings,\n    persist_directory=\"./db-mawared\")\nprint(\"vectorstore created\")",
+        "detail": "2024.gemma2_local_rag.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "vectorstore",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.indexer",
+        "description": "2024.gemma2_local_rag.indexer",
+        "peekOfCode": "vectorstore = Chroma.from_documents(\n    documents=texts, \n    embedding= embeddings,\n    persist_directory=\"./db-mawared\")\nprint(\"vectorstore created\")",
+        "detail": "2024.gemma2_local_rag.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "print_prompt",
+        "kind": 2,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "def print_prompt(input_dict):\n    formatted_prompt = prompt.format(**input_dict)\n    print(\"Generated Prompt:\")\n    print(formatted_prompt)\n    print(\"-\" * 50)\n    return input_dict\n# Function to print and pass through the formatted prompt - string output\ndef print_and_pass_prompt(formatted_prompt):\n    print(\"Generated Prompt:\")\n    print(formatted_prompt)",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "print_and_pass_prompt",
+        "kind": 2,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "def print_and_pass_prompt(formatted_prompt):\n    print(\"Generated Prompt:\")\n    print(formatted_prompt)\n    print(\"-\" * 50)\n    return formatted_prompt\n# Create the RAG chain using LCEL with prompt printing and streaming output\nrag_chain = (\n    {\"context\": retriever, \"question\": RunnablePassthrough()}\n    | prompt\n    | print_and_pass_prompt",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "ask_question",
+        "kind": 2,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "def ask_question(question):\n    print(\"Answer:\", end=\" \", flush=True)\n    for chunk in rag_chain.stream(question):\n        print(chunk.content, end=\"\", flush=True)\n    print(\"\\n\")\n# Example usage\nif __name__ == \"__main__\":\n    while True:\n        user_question = input(\"Ask a question (or type 'quit' to exit): \")\n        if user_question.lower() == 'quit':",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "embeddings",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\ndb = Chroma(persist_directory=\"./db\",\n            embedding_function=embeddings)\n# # Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 5}\n)\n# # Create Ollama language model - Gemma 2\nlocal_llm = 'gemma2'",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "db = Chroma(persist_directory=\"./db\",\n            embedding_function=embeddings)\n# # Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 5}\n)\n# # Create Ollama language model - Gemma 2\nlocal_llm = 'gemma2'\nllm = ChatOllama(model=local_llm,",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "retriever",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "retriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 5}\n)\n# # Create Ollama language model - Gemma 2\nlocal_llm = 'gemma2'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 max_tokens=512,  \n                 temperature=0)",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "local_llm",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "local_llm = 'gemma2'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 max_tokens=512,  \n                 temperature=0)\n# Create prompt template\ntemplate = \"\"\"Answer the question based only on the following context:\n{context}\nQuestion: {question}\nAnswer: \"\"\"",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "llm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 max_tokens=512,  \n                 temperature=0)\n# Create prompt template\ntemplate = \"\"\"Answer the question based only on the following context:\n{context}\nQuestion: {question}\nAnswer: \"\"\"\nprompt = ChatPromptTemplate.from_template(template)",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "template",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "template = \"\"\"Answer the question based only on the following context:\n{context}\nQuestion: {question}\nAnswer: \"\"\"\nprompt = ChatPromptTemplate.from_template(template)\n# Function to print the prompt for a runnable assign\ndef print_prompt(input_dict):\n    formatted_prompt = prompt.format(**input_dict)\n    print(\"Generated Prompt:\")\n    print(formatted_prompt)",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "prompt = ChatPromptTemplate.from_template(template)\n# Function to print the prompt for a runnable assign\ndef print_prompt(input_dict):\n    formatted_prompt = prompt.format(**input_dict)\n    print(\"Generated Prompt:\")\n    print(formatted_prompt)\n    print(\"-\" * 50)\n    return input_dict\n# Function to print and pass through the formatted prompt - string output\ndef print_and_pass_prompt(formatted_prompt):",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "rag_chain",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "peekOfCode": "rag_chain = (\n    {\"context\": retriever, \"question\": RunnablePassthrough()}\n    | prompt\n    | print_and_pass_prompt\n    | llm\n)\n# Function to ask questions\ndef ask_question(question):\n    print(\"Answer:\", end=\" \", flush=True)\n    for chunk in rag_chain.stream(question):",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_debugging",
+        "documentation": {}
+    },
+    {
+        "label": "ask_question",
+        "kind": 2,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "def ask_question(question):\n    print(\"Answer:\\t\", end=\" \", flush=True)\n    for chunk in rag_chain.stream(question):\n        print(chunk, end=\"\", flush=True)\n    print(\"\\n\")\n# Example usage\nif __name__ == \"__main__\":\n    while True:\n        user_question = input(\"Ask a question (or type 'quit' to exit): \")\n        if user_question.lower() == 'quit':",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "embeddings",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=False)\n# embeddings = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\")\ndb = Chroma(persist_directory=\"./db-mawared\",\n            embedding_function=embeddings)\n# Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "db = Chroma(persist_directory=\"./db-mawared\",\n            embedding_function=embeddings)\n# Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2\n# # Create the LLM with HuggingFacePipeline\n# llm = HuggingFacePipeline(pipeline=pipe)",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "retriever",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "retriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2\n# # Create the LLM with HuggingFacePipeline\n# llm = HuggingFacePipeline(pipeline=pipe)\nlocal_llm = 'llama3.1'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", ",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "local_llm",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "local_llm = 'llama3.1'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 num_ctx=1024,  # Changed from max_tokens to num_ctx\n                 temperature=0.5)\n# Create prompt template\ntemplate = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "llm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 num_ctx=1024,  # Changed from max_tokens to num_ctx\n                 temperature=0.5)\n# Create prompt template\ntemplate = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.\n2. Be concise and direct.",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "template",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "template = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.\n2. Be concise and direct.\n3. If the context is insufficient, ask relevant follow-up questions instead of speculating.\nContext:\n{context}\nQuestion: {question}\nAnswer:",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "prompt = ChatPromptTemplate.from_template(template)\n# Create the RAG chain using LCEL with prompt printing and streaming output\nrag_chain = (\n    {\"context\": retriever, \"question\": RunnablePassthrough()}\n    | prompt\n    | llm\n    | StrOutputParser()\n)\n# Function to ask questions\ndef ask_question(question):",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "rag_chain",
+        "kind": 5,
+        "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "peekOfCode": "rag_chain = (\n    {\"context\": retriever, \"question\": RunnablePassthrough()}\n    | prompt\n    | llm\n    | StrOutputParser()\n)\n# Function to ask questions\ndef ask_question(question):\n    print(\"Answer:\\t\", end=\" \", flush=True)\n    for chunk in rag_chain.stream(question):",
+        "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "ollama.basic",
+        "description": "ollama.basic",
+        "peekOfCode": "llm = Ollama(model=\"llama2\", \n             callback_manager = CallbackManager([StreamingStdOutCallbackHandler()]))\nllm(\"Tell me 5 facts about Roman history:\")",
+        "detail": "ollama.basic",
+        "documentation": {}
+    },
+    {
+        "label": "llm",
+        "kind": 5,
+        "importPath": "ollama.basic_chain",
+        "description": "ollama.basic_chain",
+        "peekOfCode": "llm = Ollama(model=\"llama2\", \n            #  callback_manager = CallbackManager([StreamingStdOutCallbackHandler()]),\n            temperature=0.9,\n             )\nfrom langchain.prompts import PromptTemplate\nprompt = PromptTemplate(\n    input_variables=[\"topic\"],\n    template=\"Give me 5 interesting facts about {topic}?\",\n)\nfrom langchain.chains import LLMChain",
+        "detail": "ollama.basic_chain",
+        "documentation": {}
+    },
+    {
+        "label": "prompt",
+        "kind": 5,
+        "importPath": "ollama.basic_chain",
+        "description": "ollama.basic_chain",
+        "peekOfCode": "prompt = PromptTemplate(\n    input_variables=[\"topic\"],\n    template=\"Give me 5 interesting facts about {topic}?\",\n)\nfrom langchain.chains import LLMChain\nchain = LLMChain(llm=llm, \n                 prompt=prompt,\n                 verbose=False)\n# Run the chain only specifying the input variable.\nprint(chain.run(\"the moon\"))",
+        "detail": "ollama.basic_chain",
+        "documentation": {}
+    },
+    {
+        "label": "chain",
+        "kind": 5,
+        "importPath": "ollama.basic_chain",
+        "description": "ollama.basic_chain",
+        "peekOfCode": "chain = LLMChain(llm=llm, \n                 prompt=prompt,\n                 verbose=False)\n# Run the chain only specifying the input variable.\nprint(chain.run(\"the moon\"))",
+        "detail": "ollama.basic_chain",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ollama.rag",
+        "description": "ollama.rag",
+        "peekOfCode": "def main():\n    parser = argparse.ArgumentParser(description='Filter out URL argument.')\n    parser.add_argument('--url', type=str, default='http://example.com', required=True, help='The URL to filter out.')\n    args = parser.parse_args()\n    url = args.url\n    print(f\"using URL: {url}\")\n    loader = WebBaseLoader(url)\n    data = loader.load()\n    # Split into chunks \n    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=100)",
+        "detail": "ollama.rag",
+        "documentation": {}
+    }
+]
