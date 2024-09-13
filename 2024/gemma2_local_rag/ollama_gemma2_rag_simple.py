@@ -1,7 +1,14 @@
 from langchain_community.embeddings.ollama import OllamaEmbeddings
 from langchain_community.vectorstores.chroma import Chroma
 from langchain_community.chat_models.ollama import ChatOllama
-# from llama_cpp import Llama
+from groq import Groq
+from langchain_groq import ChatGroq
+
+
+import getpass
+import os
+
+
 
 
 from langchain.prompts import ChatPromptTemplate
@@ -18,15 +25,29 @@ db = Chroma(persist_directory="./db-mawared",
 # Create retriever
 retriever = db.as_retriever(
     search_type="similarity",
-    search_kwargs= {"k": 5}
+    search_kwargs= {"k": 3}
 )
 
 
 
 
-local_llm = 'llama3.1'
 
-llm = ChatOllama(model=local_llm)
+
+os.environ["GROQ_API_KEY"] = "GROQ_API_KEY"
+# local_llm = 'llama3.1'
+
+# llm = ChatOllama(model=local_llm)
+
+llm = ChatGroq(
+    model="llama-3.1-8b-instant",
+    temperature=0.1,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+    # other params...
+)
+    
+
 
 # Create prompt template
 template = """
