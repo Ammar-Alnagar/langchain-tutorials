@@ -18,31 +18,15 @@ db = Chroma(persist_directory="./db-mawared",
 # Create retriever
 retriever = db.as_retriever(
     search_type="similarity",
-    search_kwargs= {"k": 4}
+    search_kwargs= {"k": 5}
 )
 
 
 
 
-# # Create Ollama language model - Gemma 2
+local_llm = 'llama3.1'
 
-
-
-# # Create the LLM with HuggingFacePipeline
-# llm = HuggingFacePipeline(pipeline=pipe)
-local_llm = 'phi3.5'
-
-llm = ChatOllama(
-    model=local_llm,
-    keep_alive="3h",
-    num_ctx=2048,  # Context size (number of tokens in context)
-    temperature=0.7,  # Sampling temperature, controls randomness
-    top_p=0.95,  # Nucleus sampling (cumulative probability threshold)
-    top_k=50,  # Top-k sampling (limits to top-k most likely tokens)
-    repetition_penalty=1.5,  # Penalize repeating tokens # type: ignore  # Penalize frequent tokens # type: ignore
-    use_cache=True,  # Use past conversation history # type: ignore
-      # Beam search, controls exploration of multiple sequences # type: ignore
-)
+llm = ChatOllama(model=local_llm)
 
 # Create prompt template
 template = """
