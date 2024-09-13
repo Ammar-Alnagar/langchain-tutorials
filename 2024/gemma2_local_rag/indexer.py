@@ -16,7 +16,7 @@ documents = loader.load()
 print(len(documents))
 
 # # Create embeddingsclear
-embeddings = OllamaEmbeddings(model="bge-m3", show_progress=True)
+embeddings = OllamaEmbeddings(model="nomic-embed-text", show_progress=True)
 
 # # Create Semantic Text Splitter
 # text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type="interquartile")
