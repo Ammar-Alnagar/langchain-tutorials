@@ -144,6 +144,39 @@
         "documentation": {}
     },
     {
+        "label": "Groq",
+        "importPath": "groq",
+        "description": "groq",
+        "isExtraImport": true,
+        "detail": "groq",
+        "documentation": {}
+    },
+    {
+        "label": "ChatGroq",
+        "importPath": "langchain_groq",
+        "description": "langchain_groq",
+        "isExtraImport": true,
+        "detail": "langchain_groq",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "Ollama",
         "importPath": "langchain.llms",
         "description": "langchain.llms",
@@ -277,7 +310,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.indexer",
         "description": "2024.gemma2_local_rag.indexer",
-        "peekOfCode": "loader = DirectoryLoader(\"./2024/gemma2_local_rag\", glob=\"**/*.pdf\")\nprint(\"pdf loaded loader\")\ndocuments = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"bge-m3\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,",
+        "peekOfCode": "loader = DirectoryLoader(\"./2024/gemma2_local_rag\", glob=\"**/*.pdf\")\nprint(\"pdf loaded loader\")\ndocuments = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=3000,",
         "detail": "2024.gemma2_local_rag.indexer",
         "documentation": {}
     },
@@ -286,7 +319,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.indexer",
         "description": "2024.gemma2_local_rag.indexer",
-        "peekOfCode": "documents = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"bge-m3\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,",
+        "peekOfCode": "documents = loader.load()\nprint(len(documents))\n# # Create embeddingsclear\nembeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=3000,\n    chunk_overlap=300,\n    add_start_index=True,",
         "detail": "2024.gemma2_local_rag.indexer",
         "documentation": {}
     },
@@ -295,7 +328,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.indexer",
         "description": "2024.gemma2_local_rag.indexer",
-        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"bge-m3\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,\n)\n# # Split documents into chunks\ntexts = text_splitter.split_documents(documents)",
+        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=True)\n# # Create Semantic Text Splitter\n# text_splitter = SemanticChunker(embeddings, breakpoint_threshold_type=\"interquartile\")\ntext_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=3000,\n    chunk_overlap=300,\n    add_start_index=True,\n)\n# # Split documents into chunks\ntexts = text_splitter.split_documents(documents)",
         "detail": "2024.gemma2_local_rag.indexer",
         "documentation": {}
     },
@@ -304,7 +337,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.indexer",
         "description": "2024.gemma2_local_rag.indexer",
-        "peekOfCode": "text_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=10000,\n    chunk_overlap=1000,\n    add_start_index=True,\n)\n# # Split documents into chunks\ntexts = text_splitter.split_documents(documents)\n# # Create vector store\nvectorstore = Chroma.from_documents(\n    documents=texts, ",
+        "peekOfCode": "text_splitter = RecursiveCharacterTextSplitter(\n    chunk_size=3000,\n    chunk_overlap=300,\n    add_start_index=True,\n)\n# # Split documents into chunks\ntexts = text_splitter.split_documents(documents)\n# # Create vector store\nvectorstore = Chroma.from_documents(\n    documents=texts, ",
         "detail": "2024.gemma2_local_rag.indexer",
         "documentation": {}
     },
@@ -439,7 +472,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"bge-m3\", show_progress=False)\n# embeddings = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\")\ndb = Chroma(persist_directory=\"./db-mawared\",\n            embedding_function=embeddings)\n# Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2",
+        "peekOfCode": "embeddings = OllamaEmbeddings(model=\"nomic-embed-text\", show_progress=False)\n# embeddings = HuggingFaceEmbeddings(model_name=\"sentence-transformers/all-MiniLM-L6-v2\")\ndb = Chroma(persist_directory=\"./db-mawared\",\n            embedding_function=embeddings)\n# Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\nload_dotenv()",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
@@ -448,7 +481,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "db = Chroma(persist_directory=\"./db-mawared\",\n            embedding_function=embeddings)\n# Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2\n# # Create the LLM with HuggingFacePipeline\n# llm = HuggingFacePipeline(pipeline=pipe)",
+        "peekOfCode": "db = Chroma(persist_directory=\"./db-mawared\",\n            embedding_function=embeddings)\n# Create retriever\nretriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\nload_dotenv()\nos.environ[\"GROQ_API_KEY\"] = os.getenv(\"GROQ_API_KEY\") # type: ignore\n# local_llm = 'llama3.1'",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
@@ -457,16 +490,16 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "retriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\n# # Create Ollama language model - Gemma 2\n# # Create the LLM with HuggingFacePipeline\n# llm = HuggingFacePipeline(pipeline=pipe)\nlocal_llm = 'hermes3'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", ",
+        "peekOfCode": "retriever = db.as_retriever(\n    search_type=\"similarity\",\n    search_kwargs= {\"k\": 3}\n)\nload_dotenv()\nos.environ[\"GROQ_API_KEY\"] = os.getenv(\"GROQ_API_KEY\") # type: ignore\n# local_llm = 'llama3.1'\n# llm = ChatOllama(model=local_llm)\nllm = ChatGroq(\n    model=\"llama-3.1-70b-versatile\",",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
     {
-        "label": "local_llm",
+        "label": "os.environ[\"GROQ_API_KEY\"]",
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "local_llm = 'hermes3'\nllm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 num_ctx=1024,  # Changed from max_tokens to num_ctx\n                 temperature=0.8)\n# Create prompt template\ntemplate = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.",
+        "peekOfCode": "os.environ[\"GROQ_API_KEY\"] = os.getenv(\"GROQ_API_KEY\") # type: ignore\n# local_llm = 'llama3.1'\n# llm = ChatOllama(model=local_llm)\nllm = ChatGroq(\n    model=\"llama-3.1-70b-versatile\",\n    temperature=0.1,\n    max_tokens=None,\n    timeout=None,\n    max_retries=2,\n    # other params...",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
@@ -475,7 +508,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "llm = ChatOllama(model=local_llm,\n                 keep_alive=\"3h\", \n                 num_ctx=1024,  # Changed from max_tokens to num_ctx\n                 temperature=0.8)\n# Create prompt template\ntemplate = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.\n2. Be concise and direct.",
+        "peekOfCode": "llm = ChatGroq(\n    model=\"llama-3.1-70b-versatile\",\n    temperature=0.1,\n    max_tokens=None,\n    timeout=None,\n    max_retries=2,\n    # other params...\n)\n# Create prompt template\ntemplate = \"\"\"",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
@@ -484,7 +517,7 @@
         "kind": 5,
         "importPath": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "description": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
-        "peekOfCode": "template = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer the user's question based strictly on the provided context. If the context does not contain the answer, you should ask clarifying questions to gather more information.\nMake sure to:\n1. Use only the provided context to generate the answer.\n2. Be concise and direct.\n3. If the context is insufficient, ask relevant follow-up questions instead of speculating.\nContext:\n{context}\nQuestion: {question}\nAnswer:",
+        "peekOfCode": "template = \"\"\"\nYou are an expert assistant specializing in the Mawared HR System. Your role is to answer user questions based strictly on the provided context. If the context is insufficient, ask clarifying questions to gather more information.\nGuidelines:\n1. Use only the provided context to generate answers.\n2. Be concise and direct.\n3. If the context is insufficient, ask relevant follow-up questions instead of speculating.\n4. Present answers in numbered steps when appropriate.\nWhen responding to a question, follow these steps:\n1. Analyze the Question\n   - Carefully read and comprehend the context and details.",
         "detail": "2024.gemma2_local_rag.ollama_gemma2_rag_simple",
         "documentation": {}
     },
